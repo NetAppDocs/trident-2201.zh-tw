@@ -9,9 +9,6 @@ settings:
     harmony_enabled: false
   versions:
   - name: Astra Trident
-    url: "/trident"
-    version-number: '22.04'
-  - name: Astra Trident
     url: "/trident-2201"
     version-number: '22.01'
   - name: Astra Trident
@@ -20,6 +17,9 @@ settings:
   - name: Astra Trident
     url: "/trident-2107"
     version-number: '21.07'
+  - name: Astra Trident
+    url: "/trident"
+    version-number: latest
   langs: zh-tw,us-en,ja-jp,zh-cn,ko-kr
 sidebar:
   entries:
