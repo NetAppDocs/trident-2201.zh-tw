@@ -463,7 +463,6 @@
   <block id="8e2044cc9d4e8f515ad4809a68d75465" category="paragraph">例如、對於NFS：</block>
   <block id="d39eb6e4299503c5d451d19b9645be42" category="paragraph">例如、對於iSCSI：</block>
   <block id="ea3d51fb2b16acb7cb260f25bc8965b1" category="summary">Astra Trident是由NetApp維護的開放原始碼儲存資源配置程式和Orchestrator。它可讓您為Docker和Kubernetes所管理的容器化應用程式建立儲存磁碟區。</block>
-  <block id="b9baa6fa560066bf0c9e87d66d1c0664" category="doc">Astra Trident 22.01.1文件</block>
   <block id="30d965eef5ba25c6b9998ae38270b43e" category="doc">法律聲明</block>
   <block id="e9c44bbfd795a5d63d74c6a77afee70d" category="paragraph">法律聲明提供版權聲明、商標、專利等存取權限。</block>
   <block id="6016a2b341113bf496b719905398ecd2" category="section-title">版權</block>
@@ -3139,4 +3138,5 @@
   <block id="63d5049791d9d79d86e9a108b0a999ca" category="sidebar">參考資料</block>
   <block id="324fb1352ffffb105d10013810c42896" category="sidebar">Kubernetes和Astra Trident物件</block>
   <block id="086e6c16e3fe8e13c336612ef636aa02" category="sidebar">Astra Trident</block>
+  <block id="80fa8f92dc0ebf122ed30a4a88fda343" category="doc">Astra Trident 22.01文件</block>
 </blocks>
