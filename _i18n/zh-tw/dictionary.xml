@@ -3138,4 +3138,5 @@
   <block id="c949166d6970748c0094c800daa3324a" category="sidebar">管理Astra Trident</block>
   <block id="63d5049791d9d79d86e9a108b0a999ca" category="sidebar">參考資料</block>
   <block id="324fb1352ffffb105d10013810c42896" category="sidebar">Kubernetes和Astra Trident物件</block>
+  <block id="086e6c16e3fe8e13c336612ef636aa02" category="sidebar">Astra Trident</block>
 </blocks>
