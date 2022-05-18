@@ -3139,4 +3139,6 @@
   <block id="324fb1352ffffb105d10013810c42896" category="sidebar">Kubernetes和Astra Trident物件</block>
   <block id="086e6c16e3fe8e13c336612ef636aa02" category="sidebar">Astra Trident</block>
   <block id="80fa8f92dc0ebf122ed30a4a88fda343" category="doc">Astra Trident 22.01文件</block>
+  <block id="5a333b18a215ecfd4457ba0e1732654b" category="section-title">是否能在已設定負載共享鏡射的SVM上、對磁碟區進行Trident資源配置？</block>
+  <block id="0e7629426b9d7596800cd5d72f558a7f" category="paragraph">您可以為透過NFS提供資料的SVM根磁碟區建立負載共享鏡像。針對Trident所建立的磁碟區、自動更新負載共享鏡像。ONTAP這可能會導致掛載磁碟區延遲。使用Trident建立多個磁碟區時、資源配置磁碟區會仰賴ONTAP 於更新負載共享鏡像。</block>
 </blocks>
