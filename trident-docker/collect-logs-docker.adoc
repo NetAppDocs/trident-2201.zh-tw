@@ -5,11 +5,12 @@ keywords: deploy, astra trident, trident for docker, docker, logs, binary, manag
 summary: 您可以收集記錄以協助疑難排解。收集記錄的方法會因執行Docker外掛程式的方式而有所不同。 
 ---
 = 收集記錄
-:hardbreaks:
 :allow-uri-read: 
-:icons: font
-:imagesdir: ../media/
 
+
+
+
+== 收集記錄
 
 您可以收集記錄以協助疑難排解。收集記錄的方法會因執行Docker外掛程式的方式而有所不同。
 
