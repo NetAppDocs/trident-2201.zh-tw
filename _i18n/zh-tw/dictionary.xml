@@ -3142,4 +3142,5 @@
   <block id="de781ae8dbfd68aeef56f40c5dc767da" category="paragraph">Astra Trident預期以「vsadmin」SVM使用者或具有相同角色之不同名稱的使用者身分執行。Amazon FSx for NetApp ONTAP 的使用者是「fsxadmin」使用者、只能有限地取代ONTAP 「admin」叢集使用者。不建議將「fsxadmin」使用者搭配Trident使用、因為「vsadmin」SVM使用者可以存取更多Astra Trident功能。</block>
   <block id="d5d195efeafde24a6a22effd3dd39339" category="list-text">認證型：您可以將「fsxadmin」使用者用於您的檔案系統、或是為SVM設定的「vsadmin」使用者。</block>
   <block id="be5736bb27c63c0a404a25abaa033c45" category="admonition">我們強烈建議您使用「vsadmin」使用者、而非「fssadmin」來設定後端。Astra Trident將使用此使用者名稱和密碼與FSX檔案系統通訊。</block>
+  <block id="3f44baef815aed01560d6764fea49ebc" category="cell">用於CVS磁碟區的GCP網路</block>
 </blocks>
