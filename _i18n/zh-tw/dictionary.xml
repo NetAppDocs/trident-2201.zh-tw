@@ -1285,7 +1285,6 @@
   <block id="e3f688f3aa653574b3253640aa98f47c" category="cell">在SVM中配置新磁碟區時所使用的前置碼。設定後無法更新</block>
   <block id="a996d2f8e072c583d6cc26aa1e4aba87" category="cell">「Trident」</block>
   <block id="b6ea9c09f8ac215ea68be83cd0240aac" category="cell">如果使用率高於此百分比、則無法進行資源配置。*不適用於Amazon FSX for ONTAP Sfor Sfor *</block>
-  <block id="c07510d6ca04643a0f81501d2407311b" category="cell">如果要求的磁碟區大小高於經濟驅動程式的此值、則無法進行資源配置。</block>
   <block id="9d96dfa28e7454a1119de523123a1e05" category="cell">「」（預設不強制執行）</block>
   <block id="c9a303edbc714d051896c3a678e59a8a" category="cell">《lunsPerFlexvol》</block>
   <block id="79892588cbecd0b88729ea1a55b2a3a4" category="cell">每FlexVol 個LUN的最大LUN數量、範圍必須在[50、200]</block>
@@ -3143,4 +3142,5 @@
   <block id="d5d195efeafde24a6a22effd3dd39339" category="list-text">認證型：您可以將「fsxadmin」使用者用於您的檔案系統、或是為SVM設定的「vsadmin」使用者。</block>
   <block id="be5736bb27c63c0a404a25abaa033c45" category="admonition">我們強烈建議您使用「vsadmin」使用者、而非「fssadmin」來設定後端。Astra Trident將使用此使用者名稱和密碼與FSX檔案系統通訊。</block>
   <block id="3f44baef815aed01560d6764fea49ebc" category="cell">用於CVS磁碟區的GCP網路</block>
+  <block id="66896c99fb06e0b6c86498b249f8217a" category="cell">如果要求的磁碟區大小高於此值、則資源配置失敗。</block>
 </blocks>
