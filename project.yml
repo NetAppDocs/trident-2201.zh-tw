@@ -12,14 +12,14 @@ settings:
     url: "/trident-2201"
     version-number: '22.01'
   - name: Astra Trident
+    url: "/trident"
+    version-number: '23.07'
+  - name: Astra Trident
     url: "/trident-2110"
     version-number: '21.10'
   - name: Astra Trident
     url: "/trident-2107"
     version-number: '21.07'
-  - name: Astra Trident
-    url: "/trident"
-    version-number: latest
   langs: zh-tw,us-en,ja-jp,ko-kr,zh-cn,de-de,es-es,fr-fr,it-it
 sidebar:
   entries:
