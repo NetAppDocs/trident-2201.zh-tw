@@ -972,7 +972,6 @@
   <block id="43752d169c5729fffa3a6557a0978cb8" category="list-text">Google Cloud服務帳戶的角色為「netappcloudVolumes.admin」</block>
   <block id="5d6ade9bdfebc79abf4c55e55a2c9941" category="list-text">CVS服務帳戶的API金鑰檔</block>
   <block id="7d0ee86ffc673e47ce20265e1e21317f" category="inline-link">GCP上的CVS服務類型</block>
-  <block id="1f57356f89e79e6730290eddcf7b84ee" category="paragraph">Astra Trident現在支援預設的較小磁碟區<block ref="fc2935a8a76e337f6e814f65964a47b6" category="inline-link-rx"></block>。對於以「儲存類別=軟體」建立的後端、現在磁碟區的資源配置大小最小為300 GiB。CVS目前在「管制可用度」下提供此功能、並不提供技術支援。使用者必須註冊才能存取低於1TiB的磁碟區<block ref="daab940ca038632df7b3bcdb2ce67b4b" category="inline-link-rx"></block>。NetApp建議客戶使用低於1TiB的磁碟區來處理*非正式作業*的工作負載。</block>
   <block id="adf38902d2794fb5eb0ede6324a90db7" category="admonition">使用預設CVS服務類型（「儲存類別=軟體」）部署後端時、使用者必須取得GCP上的子1TiB磁碟區功能、以取得相關專案編號和專案ID的存取權。這是Astra Trident配置子1TiB磁碟區所需的功能。如果沒有、則低於600 GiB的PVCS將無法建立Volume。使用取得對低於1TiB磁碟區的存取權<block ref="d5347d47b24e3303f1c7b0ae61e08dc7" category="inline-link-rx"></block>。</block>
   <block id="3e6d0b5d82e6a07b21f37953b4f07f2b" category="paragraph">由Astra Trident針對預設CVS服務層級所建立的磁碟區、將會配置如下：</block>
   <block id="b0f9c06798383f1aa62530b497a530f7" category="list-text">小於300 GiB的PVCS會導致Astra Trident建立300 GiB CVS Volume。</block>
@@ -1449,7 +1448,6 @@
   <block id="d356d628089d439d75e3f85564372658" category="list-text">安裝試用版</block>
   <block id="87248f7afe198418bdbedd919695631e" category="list-text">您也可以在後端定義中加入「debugTraceFlags」、以取得每個後端的偵錯記錄。例如、在Trident記錄中加入「debugTraceFlags：｛"API"：true、「method」：true、｝」以取得API呼叫和方法反向。現有的後端可設定「debugTraceFlags」、設定為「tridentctl後端更新」。</block>
   <block id="6cc37a0664d7f97f87d34eadef23dbad" category="list-text">使用RedHat CoreOS時、請確定已在工作節點上啟用「iscsid」、並預設為啟動。您可以使用OpenShift機器組態或修改點火模板來完成此作業。</block>
-  <block id="4582245538a41243a95713a7d0c21b64" category="list-text">使用Trident時可能會遇到的常見問題<block ref="4568986ef6397d7c901269fc0e190ede" category="inline-link-rx"></block> 當租戶和用戶端機密來自權限不足的應用程式登錄時。如需Trident需求的完整清單、請參閱 <block ref="c09112d17e34405b7a5c3d246f91583f" category="inline-link-macro-rx"></block> 組態：</block>
   <block id="7f0ecdfa510b31b01d331c2760643b83" category="list-text">如果將PV掛載到容器時發生問題、請確定已安裝並執行「rpcbind」。使用主機作業系統所需的套件管理程式、檢查「rpcbind」是否正在執行。您可以執行「stystemctl狀態rpcbind」或其等效項目、來檢查「rpcbind」服務的狀態。</block>
   <block id="78aeadc89feb4cf244398a7d35a0d656" category="list-text">如果Trident後端回報雖然曾經工作、但仍處於「失敗」狀態、則可能是因為變更與後端相關的SVM/admin認證資料所致。使用「tridentctl update backend」更新後端資訊、或是退回Trident pod、將可修正此問題。</block>
   <block id="f5d517b06fc0b1af5d599776e2f6f1d6" category="inline-link">這篇部落格</block>
@@ -2253,12 +2251,10 @@
   <block id="d06b5297af318d2581021098f6b0d44d" category="section-title">升級命名空間範圍內的操作員安裝</block>
   <block id="ddfa75d059a999aedec16392aae03bc4" category="paragraph">若要從使用命名空間範圍運算子（20.07到20.10版）安裝的Astra Trident執行個體進行升級、請遵循下列步驟：</block>
   <block id="edf5c542759186ded2c7eeaae6b340a5" category="list-text">確認現有Trident安裝的狀態。要執行此操作、請查看「TridentProvisioner」的*狀態*。狀態應為「Installed」（已安裝）。</block>
-  <block id="f14a1d8e56a0cbd2826edd38778371f7" category="admonition">如果狀態顯示「正在更新」、請務必先解決、再繼續。如需可能狀態值的清單、請參閱<block ref="6aefd1c9ce8e43313a8c7c92e2fac4f3" category="inline-link-rx"></block>。</block>
   <block id="683d018a2f7c70469fd74ba0eeae2a79" category="list-text">使用Trident安裝程式提供的資訊清單、建立「TridentOrchestrator」CRD。</block>
   <block id="ede3d39a1c5211985b126b3f166cf601" category="inline-link">Trident儲存庫</block>
   <block id="af39f09efb6e7b7133433dff92d0fffe" category="list-text">使用命名空間範圍的運算子資訊清單來刪除。若要完成此步驟、您需要使用「bunder.yaml」檔案來部署命名空間範圍的運算子。您可以從取得「bunder.yaml」<block ref="1403b813895a8a78c447fca96240f2ac" category="inline-link-rx"></block>。請務必使用適當的分行。</block>
   <block id="5451265740f1553dff7af7814faa5277" category="inline-link-macro">參數清單</block>
-  <block id="8afea862003d4f613fcffecc022fb20c" category="admonition">刪除命名空間範圍的運算子之後、在安裝叢集範圍的運算子之前、您應該對Trident安裝參數進行必要的變更（例如、變更「tridentImage」、「autosupportImage」、「Private Image儲存庫」的值、以及提供「imagepolSecrets」）。如需可更新的完整參數清單、請參閱 <block ref="e5ef433069537d0999d9cf3f906affdb" category="inline-link-macro-rx"></block>。</block>
   <block id="5fbede7820945c99130183fd2fd0f4b3" category="paragraph">在這個階段、「Trident - oper-xxxxxx-xxxxx" pod會刪除。</block>
   <block id="86463d362af5835ff8c3fd6587fbd24f" category="list-text">（選用）如果需要修改安裝參數、請更新「TridentProvisioner」規格。這些變更可能包括：修改私有映像登錄以從擷取容器映像、啟用偵錯記錄或指定映像提取機密。</block>
   <block id="df486b34cec5fdfba24de79fe6b388d4" category="list-text">安裝叢集範圍的運算子。</block>
@@ -2304,7 +2300,6 @@
   <block id="8d66ed6671344ec6017707c38250329c" category="admonition">所有19.04版及更早版本的升級、都需要將Astra Trident的中繼資料從自己的「etcd」移轉至CRD物件。請務必查看版本文件、瞭解升級的運作方式。</block>
   <block id="33966eba1ed0cde6afda5a97ffaffb09" category="inline-link">安全性內容</block>
   <block id="ceb268093ddd5aa9df1769eda5d1c8cd" category="inline-link">範例輸入</block>
-  <block id="1ca02e26ff81cefae18a0a8d994ca94a" category="admonition">升級時、務必在Astra Trident使用的「torageClasses」中提供「參數.FSType」。您可以刪除並重新建立「儲存類別」、而不會中斷現有的磁碟區。這是強制實施的一項**要求<block ref="cafe4c6014d8c45aaac70e49318f1a2a" category="inline-link-rx"></block> 適用於SAN磁碟區。。<block ref="25daec0b57549a6ad43dbc62a9e717ca" category="inline-link-rx"></block> 目錄包含範例、例如<block ref="d308f4d12b21bf269d64643e1eceeeb2" category="inline-link-rx"></block> 和<block ref="b6ff3ec2ac914a047085c08d5843e316" category="inline-link-rx"></block>。如需詳細資訊、請參閱 <block ref="139a59f2208174d2bf825b80dc580275" category="inline-link-macro-rx"></block>。</block>
   <block id="17cfb8bd7f378fa26b63ee73d467cb82" category="section-title">我應該選擇哪種升級途徑？</block>
   <block id="46940159293e259bcf0bb4df75448100" category="paragraph">您可以使用下列其中一種方法來升級：</block>
   <block id="dc1a9a8ad35cc8aa946e0a2e3f959e2b" category="list-text">使用Trident運算子。</block>
@@ -2861,7 +2856,6 @@
   <block id="abbdd4298bb3e525fd172b2bbe5a451c" category="section-title">我要如何為ONTAP 以NAS配置的Volume設定Unix權限？</block>
   <block id="a535e502931280dfaa539ecd1cbdfc0c" category="paragraph">您可以在後端定義檔中設定參數、以設定Astra Trident所佈建的Volume上的Unix權限。</block>
   <block id="094ef47e6456d60b656401b0f2bbfcbd" category="section-title">如何在ONTAP 配置Volume時、設定一組明確的靜態NFS掛載選項？</block>
-  <block id="84ae0d345d4b749efbbc8103b0770e68" category="paragraph">依預設、Astra Trident不會使用Kubernetes將掛載選項設為任何值。若要在Kubernetes儲存類別中指定掛載選項、請遵循所提供的範例<block ref="cd55c45fce745b7032050d3a7a9ec326" category="inline-link-rx"></block>。</block>
   <block id="ae6bc3659bb0be0a7d9f98a63775b7c2" category="section-title">如何將已配置的磁碟區設定為特定的匯出原則？</block>
   <block id="700a2008fea63d02c24b85f2f75d357e" category="paragraph">若要允許適當的主機存取磁碟區、請使用後端定義檔中設定的「exportPolicy」參數。</block>
   <block id="9d5813dee71bcbf3d3a03c62354c3e55" category="section-title">如何透過Astra Trident搭配ONTAP 使用才能設定Volume加密？</block>
@@ -3008,7 +3002,6 @@
   <block id="c949166d6970748c0094c800daa3324a" category="sidebar">管理Astra Trident</block>
   <block id="63d5049791d9d79d86e9a108b0a999ca" category="sidebar">參考資料</block>
   <block id="324fb1352ffffb105d10013810c42896" category="sidebar">Kubernetes和Astra Trident物件</block>
-  <block id="086e6c16e3fe8e13c336612ef636aa02" category="sidebar">Astra Trident</block>
   <block id="80fa8f92dc0ebf122ed30a4a88fda343" category="doc">Astra Trident 22.01文件</block>
   <block id="5a333b18a215ecfd4457ba0e1732654b" category="section-title">是否能在已設定負載共享鏡射的SVM上、對磁碟區進行Trident資源配置？</block>
   <block id="0e7629426b9d7596800cd5d72f558a7f" category="paragraph">您可以為透過NFS提供資料的SVM根磁碟區建立負載共享鏡像。針對Trident所建立的磁碟區、自動更新負載共享鏡像。ONTAP這可能會導致掛載磁碟區延遲。使用Trident建立多個磁碟區時、資源配置磁碟區會仰賴ONTAP 於更新負載共享鏡像。</block>
@@ -3105,4 +3098,11 @@
   <block id="dd38f906b37d412de7d1c1dcf4cbf31c" category="paragraph"><block ref="dd38f906b37d412de7d1c1dcf4cbf31c" category="inline-link-macro-rx"></block></block>
   <block id="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-macro"><block ref="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-rx"></block></block>
   <block id="2352c4e1f4d0024ade0869e00e6243f4" category="paragraph"><block ref="2352c4e1f4d0024ade0869e00e6243f4" category="inline-link-macro-rx"></block></block>
+  <block id="db119bf2f5afe50fb07cda934d0a0910" category="admonition">如果狀態顯示<block ref="6909beea5b50605780e3411f879fe916" prefix=" " category="inline-code"></block>、請務必先解決此問題、再繼續進行。如需可能狀態值的清單、請參閱 <block ref="f3075589264229c97b562eda3fd87b58" category="inline-link-macro-rx"></block>。</block>
+  <block id="ededd8902bec1cd65fbb8766bfb21070" category="admonition">您應該對Trident安裝參數進行必要的變更（例如、變更的值）<block ref="d771848c80f96e5954a8658655cf79d7" prefix=" " category="inline-code"></block>、<block ref="7ecc687ea7566f05fd13fde7be607bfc" prefix=" " category="inline-code"></block>、私有映像儲存庫、以及提供<block ref="0d9b54b29da54379cca6b8782b9faae5" prefix=" " category="inline-code"></block>）刪除命名空間範圍的運算子之後、安裝叢集範圍的運算子之前。如需可更新的完整參數清單、請參閱 <block ref="a0446138542e129426b1f6ff199acfa3" category="inline-link-macro-rx"></block>。</block>
+  <block id="e8fe26bf5b53940e7e52b3f166871cc3" category="admonition">升級時、請務必提供<block ref="f6e7f85d8aee15940665bf722f7afac2" prefix=" " category="inline-code"></block> 在中<block ref="f652904c3bfb48fb25a0a75f485f0ff6" prefix=" " category="inline-code"></block> 由Astra Trident使用。您可以刪除並重新建立<block ref="f652904c3bfb48fb25a0a75f485f0ff6" prefix=" " category="inline-code"></block> 無需中斷既有的磁碟區。這是強制實施的一項**要求<block ref="cafe4c6014d8c45aaac70e49318f1a2a" category="inline-link-rx"></block> 適用於SAN磁碟區。。<block ref="25daec0b57549a6ad43dbc62a9e717ca" category="inline-link-rx"></block> 目錄包含範例、例如<block ref="0ce20df6bd6dcd4e1d745bdf09932b86" category="inline-link-rx"></block><block ref="9abb8c7777ddb413820ee07d5d93aa4a" prefix="[" category="inline-code"></block>^]和<block ref="bab3b119449dc236bcd556fb4b3647ac" category="inline-link-rx"></block><block ref="69ae2d9a6d831af7488e53fec053b77e" prefix="[" category="inline-code"></block>^]。
+如需詳細資訊、請參閱 <block ref="139a59f2208174d2bf825b80dc580275" category="inline-link-macro-rx"></block>。</block>
+  <block id="1b832ef852805a4e825ca6c6ec5295f7" category="paragraph">Astra Trident現在支援預設的較小磁碟區<block ref="e9e5fc0bc02a6a1b02d344d2f4e0e88a" category="inline-link-rx"></block>。用於建立的後端<block ref="c7237d9128f41df56bf2ba9c87fd26e8" prefix=" " category="inline-code"></block>、現在、磁碟區的資源配置大小最小可達300 GiB。CVS目前在「管制可用度」下提供此功能、並不提供技術支援。使用者必須註冊才能存取低於1TiB的磁碟區<block ref="daab940ca038632df7b3bcdb2ce67b4b" category="inline-link-rx"></block>。NetApp建議客戶使用低於1TiB的磁碟區來處理*非正式作業*的工作負載。</block>
+  <block id="419c95e5a9e44d427f99debdcf0550c7" category="list-text">使用Trident時可能會遇到的常見問題<block ref="4568986ef6397d7c901269fc0e190ede" category="inline-link-rx"></block> 當租戶和用戶端機密來自權限不足的應用程式登錄時。如需Trident需求的完整清單、請參閱 <block ref="cd38c25b6345abc8733d2ef72739cd97" category="inline-link-macro-rx"></block> 組態：</block>
+  <block id="3e9e53a916f99df7d6286c52e3b7a9d5" category="paragraph">依預設、Astra Trident不會使用Kubernetes將掛載選項設為任何值。若要在Kubernetes儲存類別中指定掛載選項、請遵循所提供的範例<block ref="fe27d7e6fa26e46ae96377664e7dbdff" category="inline-link-rx"></block>。</block>
 </blocks>
