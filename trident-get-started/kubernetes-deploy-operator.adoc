@@ -88,7 +88,7 @@ Helm圖表中的「values.yaml」檔案提供金鑰清單及其預設值。
 
 === 步驟1：判斷Kubernetes叢集的資格
 
-首先您需要登入Linux主機、然後確認它正在管理_運作_、 link:requirements.html["支援的Kubernetes叢集"^] 您擁有必要的權限。
+首先您需要登入Linux主機、然後確認它正在管理_運作_、 link:../trident-get-started/requirements.html["支援的Kubernetes叢集"^] 您擁有必要的權限。
 
 
 NOTE: 使用OpenShift時、請在所有範例中使用「oc"而非「kubecll」、然後先執行「ocLogin -u system:admin」或「occ login-u kube-admin」、以*系統：admin*登入。

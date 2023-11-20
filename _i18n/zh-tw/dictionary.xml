@@ -1757,7 +1757,6 @@
   <block id="1294c366742670bd28702f7cafffc981" category="paragraph">「helm清單」會顯示安裝的詳細資料、例如名稱、命名空間、圖表、狀態、 應用程式版本、修訂編號等。</block>
   <block id="3470548c691fb90c7ea544350c2c7052" category="section-title">手動部署Trident運算子</block>
   <block id="8f3f1888bbf317edb14f0f439c7d142f" category="paragraph">執行所列步驟、手動部署Trident運算子。</block>
-  <block id="619cde7335e798082dc3bfdbe30708a0" category="paragraph">首先您需要登入Linux主機、然後確認它正在管理_運作_、 <block ref="ac355729d1ddc95a290738ca862fed08" category="inline-link-macro-rx"></block> 您擁有必要的權限。</block>
   <block id="e420b75ec3bc014e3f69c43b2383768b" category="admonition">使用OpenShift時、請在所有範例中使用「oc"而非「kubecll」、然後先執行「ocLogin -u system:admin」或「occ login-u kube-admin」、以*系統：admin*登入。</block>
   <block id="3b4c548466953befff1962ac2426cb8e" category="paragraph">若要查看Kubernetes版本是否晚於1.17、請執行下列命令：</block>
   <block id="b51ca564a2763a36e8eff661a1e45814" category="section-title">步驟2：下載並設定營運者</block>
@@ -2238,7 +2237,6 @@
   <block id="ba45a58fb6371fc5a91fb8a5d399becd" category="list-text">如果您已解除安裝了「csi Trident」、而且安裝中的中繼資料持續存在、您可以使用操作者進行升級。</block>
   <block id="33deedceb6eaeb2f124b7ce830e212a8" category="list-text">在特定Kubernetes叢集中的所有命名空間中、只應有一個Astra Trident安裝。</block>
   <block id="f6c44c912e06b8221085c219600c6387" category="inline-link-macro">1.17版及更新版本</block>
-  <block id="0805928cc4c4b801e682a6cd2006e692" category="list-text">您應該使用執行的Kubernetes叢集 <block ref="b1e96583006584730c41f3baa3725240" category="inline-link-macro-rx"></block>。</block>
   <block id="093e1971a4b17fce7e3e4d94854a46ba" category="list-text">如果存在Alpha Snapshot CRD、您應該使用「tridentctl obliviate alpha-snapshot -crd」來移除。這會刪除Alpha Snapshot規格的客戶需求日。如需應刪除/移轉的現有快照、請參閱<block ref="ddf3864130a7be37c683b2fe21303201" category="inline-link-rx"></block>。</block>
   <block id="199ed8c975e8bb544d18428ba17adbc3" category="inline-link">GitHub問題詳細資料</block>
   <block id="398b69b685d2969c9e5d2f8cfbff3972" category="admonition">使用OpenShift Container Platform上的運算子來升級Trident時、您應該升級至Trident 21.01.1或更新版本。隨21.01.0一起發行的Trident運算子包含已在21.01.1中修正的已知問題。如需詳細資訊、請參閱<block ref="bcebcdd21adcbb3d7c640d63a711c6fb" category="inline-link-rx"></block>。</block>
@@ -2298,8 +2296,6 @@
   <block id="6ed2af44865aa9f6dddcebd57d996cf1" category="list-text">第一次從18.07升級至19.07。請參閱個別版本的文件、以取得升級的特定指示。</block>
   <block id="ff115c7087db60c699cccdb21f39ea66" category="list-text">然後從19.07升級至20.07。</block>
   <block id="8d66ed6671344ec6017707c38250329c" category="admonition">所有19.04版及更早版本的升級、都需要將Astra Trident的中繼資料從自己的「etcd」移轉至CRD物件。請務必查看版本文件、瞭解升級的運作方式。</block>
-  <block id="33966eba1ed0cde6afda5a97ffaffb09" category="inline-link">安全性內容</block>
-  <block id="ceb268093ddd5aa9df1769eda5d1c8cd" category="inline-link">範例輸入</block>
   <block id="17cfb8bd7f378fa26b63ee73d467cb82" category="section-title">我應該選擇哪種升級途徑？</block>
   <block id="46940159293e259bcf0bb4df75448100" category="paragraph">您可以使用下列其中一種方法來升級：</block>
   <block id="dc1a9a8ad35cc8aa946e0a2e3f959e2b" category="list-text">使用Trident運算子。</block>
@@ -2775,7 +2771,6 @@
   <block id="0a7e87df44869b8d60a83f35d1e2747b" category="section-title">在Kubernetes叢集上安裝及使用Astra Trident</block>
   <block id="6a3ad0d68dcfe0164611dadb7f7656f9" category="paragraph">Astra Trident不再需要「etcd」。它使用客戶需求日來維持狀態。</block>
   <block id="bde6cb03741f92107c63aeebe62d3278" category="section-title">Astra Trident是否支援從私有登錄進行離線安裝？</block>
-  <block id="45b09f7cb3dcbe0274eef2b3fce46bea" category="paragraph">可以、Astra Trident可以離線安裝。請參閱 <block ref="4a2b27d6d4bc3dd7ae85bfd131d50753" category="inline-link-macro-rx"></block>。</block>
   <block id="1c51806b370d428d5779dbcacd940174" category="section-title">我可以從遠端安裝Astra Trident嗎？</block>
   <block id="bf858450c271da75a3df3a15ca761330" category="paragraph">是的。Astra Trident 18.10及更新版本可從任何對叢集具有「kubectl」存取權的機器、支援遠端安裝功能。驗證「kubecll」存取後（例如、從遠端機器啟動「kubecll Get nodes」命令進行驗證）、請遵循安裝指示。</block>
   <block id="12694c2de4575e39a6f7e81d55e35de9" category="section-title">我可以使用Astra Trident設定高可用度嗎？</block>
@@ -2783,9 +2778,7 @@
   <block id="1656e4b34abdb6d497b40cac65366767" category="section-title">Astra Trident是否需要存取Kube系統命名空間？</block>
   <block id="6f67e1edfd4aa5b0e695528a9c7d8898" category="paragraph">Astra Trident從Kubernetes API伺服器讀取、以判斷應用程式何時要求新的PVCS、因此需要存取Kube-system。</block>
   <block id="16cdb35003b5bcf0f30556e0bc477511" category="section-title">Astra Trident使用哪些角色和權限？</block>
-  <block id="6efc6545e459b8bb96815706b41a84cd" category="paragraph">Trident安裝程式會建立Kubernetes ClusterRole、該叢集具有特定存取權、可存取叢集的PersistentVolume、PersistentVolume Claim、StorageClass及Kubernetes叢集的Secret資源。請參閱 <block ref="7a68296d6f600eac17d317743bea0050" category="inline-link-macro-rx"></block>。</block>
   <block id="8ff39a39871cc30228035bc0580a6af4" category="section-title">我可以在本機產生安裝所用的確切資訊清單檔案嗎？</block>
-  <block id="0f43ba8a9cfc14b033c2c652f53bfcb9" category="paragraph">如有需要、您可以在本機產生及修改安裝所使用的確切資訊清單檔案Astra Trident。請參閱 <block ref="7a68296d6f600eac17d317743bea0050" category="inline-link-macro-rx"></block>。</block>
   <block id="e6af67b71bd46d7588b50f28e1414f9b" category="section-title">我是否可以針對ONTAP 兩個獨立Kubernetes叢集的兩個Astra Trident執行個體、共用相同的支援功能後端SVM？</block>
   <block id="7bbf9b47e035f0f9bb7c46098e78fb4d" category="paragraph">雖然不建議使用、但您可以針對兩個Astra Trident執行個體使用相同的後端SVM。在安裝期間為每個執行個體指定唯一的Volume名稱、並（或）在「Setup/backend.json」檔案中指定唯一的「儲存前置字元」參數。這是為了確保FlexVol 兩個執行個體都不會使用相同的功能。</block>
   <block id="9840a5bb6278469ed550bcdcc92c29c5" category="section-title">是否能在ContainerLinux（前身為CoreOS）下安裝Astra Trident？</block>
@@ -2823,7 +2816,6 @@
   <block id="ce44cbbc54839f39b351c091b0e3caa5" category="paragraph">NetApp支援將Astra Trident從一個重大版本升級至下一個重大版本。您可以從11.xx版升級至19.xx、19.xx版升級至20.xx版、依此類推。在正式作業部署之前、您應該先在實驗室中測試升級。</block>
   <block id="0399b9e6348e554937a4d65efc97a1b8" category="section-title">是否能將Trident降級至先前的版本？</block>
   <block id="d307563c01953bd90a41ddd049f96d51" category="inline-link-macro">降級一節</block>
-  <block id="72fec731c958562fd09df08eef5fbb89" category="paragraph">如果您想要降級、有許多因素需要評估。請參閱 <block ref="ea621a0de3f004c488ea799d0fd7e41d" category="inline-link-macro-rx"></block>。</block>
   <block id="ba9c59aa9d07b25e124dcf6ca88d689a" category="section-title">管理後端和磁碟區</block>
   <block id="ffe72215dff9a93d62ee68905212025e" category="section-title">我是否需要在ONTAP 一個後端定義檔案中定義管理和資料生命期？</block>
   <block id="3a35d35cc18d96684d78b36a81422e0c" category="paragraph">NetApp建議在後端定義檔中同時使用這兩個檔案。不過、管理LIF是唯一必須執行的功能。</block>
@@ -3100,9 +3092,15 @@
   <block id="2352c4e1f4d0024ade0869e00e6243f4" category="paragraph"><block ref="2352c4e1f4d0024ade0869e00e6243f4" category="inline-link-macro-rx"></block></block>
   <block id="db119bf2f5afe50fb07cda934d0a0910" category="admonition">如果狀態顯示<block ref="6909beea5b50605780e3411f879fe916" prefix=" " category="inline-code"></block>、請務必先解決此問題、再繼續進行。如需可能狀態值的清單、請參閱 <block ref="f3075589264229c97b562eda3fd87b58" category="inline-link-macro-rx"></block>。</block>
   <block id="ededd8902bec1cd65fbb8766bfb21070" category="admonition">您應該對Trident安裝參數進行必要的變更（例如、變更的值）<block ref="d771848c80f96e5954a8658655cf79d7" prefix=" " category="inline-code"></block>、<block ref="7ecc687ea7566f05fd13fde7be607bfc" prefix=" " category="inline-code"></block>、私有映像儲存庫、以及提供<block ref="0d9b54b29da54379cca6b8782b9faae5" prefix=" " category="inline-code"></block>）刪除命名空間範圍的運算子之後、安裝叢集範圍的運算子之前。如需可更新的完整參數清單、請參閱 <block ref="a0446138542e129426b1f6ff199acfa3" category="inline-link-macro-rx"></block>。</block>
-  <block id="e8fe26bf5b53940e7e52b3f166871cc3" category="admonition">升級時、請務必提供<block ref="f6e7f85d8aee15940665bf722f7afac2" prefix=" " category="inline-code"></block> 在中<block ref="f652904c3bfb48fb25a0a75f485f0ff6" prefix=" " category="inline-code"></block> 由Astra Trident使用。您可以刪除並重新建立<block ref="f652904c3bfb48fb25a0a75f485f0ff6" prefix=" " category="inline-code"></block> 無需中斷既有的磁碟區。這是強制實施的一項**要求<block ref="cafe4c6014d8c45aaac70e49318f1a2a" category="inline-link-rx"></block> 適用於SAN磁碟區。。<block ref="25daec0b57549a6ad43dbc62a9e717ca" category="inline-link-rx"></block> 目錄包含範例、例如<block ref="0ce20df6bd6dcd4e1d745bdf09932b86" category="inline-link-rx"></block><block ref="9abb8c7777ddb413820ee07d5d93aa4a" prefix="[" category="inline-code"></block>^]和<block ref="bab3b119449dc236bcd556fb4b3647ac" category="inline-link-rx"></block><block ref="69ae2d9a6d831af7488e53fec053b77e" prefix="[" category="inline-code"></block>^]。
-如需詳細資訊、請參閱 <block ref="139a59f2208174d2bf825b80dc580275" category="inline-link-macro-rx"></block>。</block>
   <block id="1b832ef852805a4e825ca6c6ec5295f7" category="paragraph">Astra Trident現在支援預設的較小磁碟區<block ref="e9e5fc0bc02a6a1b02d344d2f4e0e88a" category="inline-link-rx"></block>。用於建立的後端<block ref="c7237d9128f41df56bf2ba9c87fd26e8" prefix=" " category="inline-code"></block>、現在、磁碟區的資源配置大小最小可達300 GiB。CVS目前在「管制可用度」下提供此功能、並不提供技術支援。使用者必須註冊才能存取低於1TiB的磁碟區<block ref="daab940ca038632df7b3bcdb2ce67b4b" category="inline-link-rx"></block>。NetApp建議客戶使用低於1TiB的磁碟區來處理*非正式作業*的工作負載。</block>
-  <block id="419c95e5a9e44d427f99debdcf0550c7" category="list-text">使用Trident時可能會遇到的常見問題<block ref="4568986ef6397d7c901269fc0e190ede" category="inline-link-rx"></block> 當租戶和用戶端機密來自權限不足的應用程式登錄時。如需Trident需求的完整清單、請參閱 <block ref="cd38c25b6345abc8733d2ef72739cd97" category="inline-link-macro-rx"></block> 組態：</block>
   <block id="3e9e53a916f99df7d6286c52e3b7a9d5" category="paragraph">依預設、Astra Trident不會使用Kubernetes將掛載選項設為任何值。若要在Kubernetes儲存類別中指定掛載選項、請遵循所提供的範例<block ref="fe27d7e6fa26e46ae96377664e7dbdff" category="inline-link-rx"></block>。</block>
+  <block id="11e8ef6c378ba835810fad2cc65ce5b5" category="paragraph">可以、Astra Trident可以離線安裝。請參閱 <block ref="8b57b68a0e3f8b19c1d735a44663ac45" category="inline-link-macro-rx"></block>。</block>
+  <block id="adeea0b918e5e67a7166a2c204249e64" category="paragraph">Trident安裝程式會建立Kubernetes ClusterRole、該叢集具有特定存取權、可存取叢集的PersistentVolume、PersistentVolume Claim、StorageClass及Kubernetes叢集的Secret資源。請參閱 <block ref="52b05a1acf0f0f7fbbce1ec1469188fc" category="inline-link-macro-rx"></block>。</block>
+  <block id="5b72286a318e05b9dba4ea3ab28f1892" category="paragraph">如有需要、您可以在本機產生及修改安裝所使用的確切資訊清單檔案Astra Trident。請參閱 <block ref="52b05a1acf0f0f7fbbce1ec1469188fc" category="inline-link-macro-rx"></block>。</block>
+  <block id="85460df1250aafcb2de34171c5aeaf3e" category="paragraph">如果您想要降級、有許多因素需要評估。請參閱 <block ref="e329ea23909a383c742caf5bc0299d71" category="inline-link-macro-rx"></block>。</block>
+  <block id="5e74892a3fc09257dc0257ff5247631b" category="list-text">使用Trident時可能會遇到的常見問題<block ref="4568986ef6397d7c901269fc0e190ede" category="inline-link-rx"></block> 當租戶和用戶端機密來自權限不足的應用程式登錄時。如需Trident需求的完整清單、請參閱 <block ref="afedf4ee56554ea6e6b54e6aa206680c" category="inline-link-macro-rx"></block> 組態：</block>
+  <block id="f377a3231e9079a5501eb1a2a53aae0c" category="paragraph">首先您需要登入Linux主機、然後確認它正在管理_運作_、 <block ref="f546aa86570a808d23361d7f4e2a08c3" category="inline-link-macro-rx"></block> 您擁有必要的權限。</block>
+  <block id="f5ad5d8863591c7f04e8a6747b6565a0" category="list-text">您應該使用執行的Kubernetes叢集  <block ref="ac77c4f66d07e354303b5ed7c917ba28" category="inline-link-macro-rx"></block>。</block>
+  <block id="da66575a36601082676fb1d5422feba6" category="admonition">升級時、請務必提供<block ref="f6e7f85d8aee15940665bf722f7afac2" prefix=" " category="inline-code"></block> 在中<block ref="f652904c3bfb48fb25a0a75f485f0ff6" prefix=" " category="inline-code"></block> 由Astra Trident使用。您可以刪除並重新建立<block ref="f652904c3bfb48fb25a0a75f485f0ff6" prefix=" " category="inline-code"></block> 無需中斷既有的磁碟區。這是對 SAN 磁碟區強制執行 https://kubernetes.io/docs/tasks/configure-pod-container/security-context/[security 內容 ^] 的 ** 需求 ** 。https://github.com/NetApp/trident/tree/master/trident-installer/sample-input[sample INPUT ^] 目錄包含 https://github.com/NetApp/trident/blob/master/trident-installer/sample-input/storage-class-samples/storage-class-basic.yaml.templ 等範例<block ref="9abb8c7777ddb413820ee07d5d93aa4a" prefix="[" category="inline-code"></block>^] 和連結： https://github.com/NetApp/trident/blob/master/trident-installer/sample-input/storage-class-samples/storage-class-bronze-default.yaml<block ref="69ae2d9a6d831af7488e53fec053b77e" prefix="[" category="inline-code"></block>^]。
+如需詳細資訊、請參閱 <block ref="139a59f2208174d2bf825b80dc580275" category="inline-link-macro-rx"></block>。</block>
 </blocks>
