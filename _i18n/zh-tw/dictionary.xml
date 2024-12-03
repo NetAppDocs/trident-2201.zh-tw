@@ -2194,13 +2194,6 @@
   <block id="b6a8ac29724d88dfaec657edda424d98" category="paragraph">NetApp建議部署雙向CHAP、以確保主機與NetApp HCI 支援功能及SolidFire 支援功能之間的驗證。Astra Trident使用每個租戶包含兩個CHAP密碼的秘密物件。當Trident安裝為「csi佈建程式」時、它會管理CHAP機密、並將其儲存在個別PV的「tridentvolume」（Tridentvolume）CR物件中。建立PV時、「csi Astra Trident」會使用CHAP機密來啟動iSCSI工作階段、NetApp HCI 並透過CHAP與該系統進行通訊SolidFire 。</block>
   <block id="19cde2e69238c98382d677e2583cbc46" category="admonition">由csi Trident建立的磁碟區不會與任何Volume存取群組相關聯。</block>
   <block id="3179d8563cd49690a141c34c045dfab8" category="paragraph">在非csi前端中、磁碟區作為工作節點上的裝置附加作業是由Kubernetes處理。建立磁碟區之後、Astra Trident會呼叫NetApp HCI / SolidFire系統、以便在該租戶的機密資訊尚未存在時擷取機密資訊。然後、Astra Trident將機密傳給Kubernetes。位於每個節點上的Kubelet可透過Kubernetes API存取機密資料、並使用它們在存取磁碟區的每個節點與磁碟區所在的NetApp HCI / SolidFire系統之間執行/啟用CHAP。</block>
-  <block id="34c4dac14496e9c45d92f345d9392fc8" category="summary">如果您未執行最新版本、則可取得舊版Astra Trident的文件。</block>
-  <block id="ba09ee47d11962c1ccd13d7e1f10e6c5" category="doc">較早版本的文件</block>
-  <block id="b0f4f0ac7ea6be4c3047dd422c23539b" category="paragraph">如果您未執行Astra Trident 22.01、則可取得先前版本的文件。</block>
-  <block id="cce172403b73af5c2a4e93081affcc7f" category="inline-link">Astra Trident 21.10</block>
-  <block id="606b9e83fb467a43b3065d4fd5037094" category="list-text"><block ref="606b9e83fb467a43b3065d4fd5037094" category="inline-link-rx"></block></block>
-  <block id="a93e9e44b7a375a4236260f5ff2b251e" category="inline-link">Astra Trident 21.07</block>
-  <block id="3830d427e146a8a64454dc373d9b1502" category="list-text"><block ref="3830d427e146a8a64454dc373d9b1502" category="inline-link-rx"></block></block>
   <block id="dec54888538ac86f51d29a3d043e6bf6" category="summary">您可以使用業者輕鬆升級現有的Astra Trident安裝。</block>
   <block id="5ff3faebb0ff710340bdbee89a4667ad" category="doc">與營運者一起升級</block>
   <block id="056b6e39cb1ae24d946674f95697989a" category="paragraph">您可以使用業者輕鬆升級現有的Astra Trident安裝。</block>
@@ -2867,8 +2860,6 @@
   <block id="5dd03e8d039863e563e049be198c3fd3" category="doc">版本資訊</block>
   <block id="2e6ce374ac42de81aea6a3d682b92e33" category="paragraph">版本資訊提供最新版Astra Trident的新功能、增強功能及錯誤修正資訊。</block>
   <block id="e4c4d344a524d21b898e4d04b6539aa7" category="admonition">安裝程式壓縮檔中提供的Linux試用版（tridentctl）二進位檔是經過測試且受支援的版本。請注意、不會測試或支援壓縮檔中「/Extras」部分提供的「macos」二進位檔。</block>
-  <block id="368b120a3b5f53a49dc3ab96ec9b8dbd" category="paragraph">NetApp持續改善及強化其產品與服務。以下是Astra Trident的一些最新功能。如需舊版的資訊、請參閱<block ref="25da125dffad1d6323c21354bccf0203" category="inline-link-rx"></block>。</block>
-  <block id="7072ec708b0ea7e3243747d8b79c0d20" category="admonition">如果您要從任何先前的Trident版本升級並使用Azure NetApp Files 更新版本、則「位置」組態參數現在是必填的單一欄位。</block>
   <block id="41cf959adc98386b54829d71a6ed5d37" category="section-title">修正</block>
   <block id="a98b2ebbcbb381d3abc81e2ecfb2054c" category="inline-link-macro">GitHub問題#691</block>
   <block id="61465c1d4383dd4afdf168925e15e767" category="list-text">已修正在刪除節點上解除發佈磁碟區的問題。（<block ref="5fee6ab43e8008edba54375694a29266" category="inline-link-macro-rx"></block>）</block>
@@ -2943,7 +2934,6 @@
   <block id="b622c74429f1282e8ed1f79ee8d53260" category="paragraph">在「Container」通路上、也有一個充滿活力的公共社群、由容器使用者（包括Astra Trident開發人員）所共同參與<block ref="e5c49b87a1fe6d362b72260d2620cf35" category="inline-link-rx"></block>。這是您提出專案相關一般問題、並與志同道合的同儕討論相關主題的好地方。</block>
   <block id="d327e8f24b63b83e091dccdc48dd7b1b" category="sidebar">Astra Trident文件</block>
   <block id="7d0ee6fed10d3d4e5c9ee496729ab519" category="sidebar">版本資訊</block>
-  <block id="93168a8084b3e838d2932c4734bd234e" category="sidebar">舊版</block>
   <block id="eb1f347fa6176ae2c9175df3bc414954" category="sidebar">使用Astra Trident</block>
   <block id="f14894e4c400a400c02367258a93029a" category="sidebar">適合Docker的Astra Trident</block>
   <block id="e08bfc79c5202517b3814efd6e82fb2c" category="sidebar">升級或解除安裝Trident</block>
@@ -3070,4 +3060,5 @@
   <block id="f8b52d963f246a75dc6c8b78c954a4fd" category="list-text"><block ref="f8b52d963f246a75dc6c8b78c954a4fd" category="inline-link-rx"></block></block>
   <block id="b6780b7b2561935ff862fe7126cde751" category="list-text"><block ref="b6780b7b2561935ff862fe7126cde751" category="inline-link-rx"></block></block>
   <block id="b9a641d903e611a87a5e68ac7fdb0b84" category="list-text">Trident AutoSupport 無法收集或傳輸個人識別資訊（PII）或個人資訊。隨附<block ref="173a360b412944768c2ab13e6c8fd1c7" category="inline-link-rx"></block> 不適用於 Trident 容器映像本身的。您可以深入瞭解 NetApp 對資料安全與信任的承諾<block ref="d3cc55401bc8303e01c6b0c43ba0733f" category="inline-link-rx"></block>。</block>
+  <block id="9bbe247417ec112bd7f3be36a4035717" category="paragraph">NetApp持續改善及強化其產品與服務。以下是Astra Trident的一些最新功能。</block>
 </blocks>

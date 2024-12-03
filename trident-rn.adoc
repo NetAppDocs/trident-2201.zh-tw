@@ -20,10 +20,7 @@ WARNING: 安裝程式壓縮檔中提供的Linux試用版（tridentctl）二進�
 
 == 22.01.1的新功能
 
-NetApp持續改善及強化其產品與服務。以下是Astra Trident的一些最新功能。如需舊版的資訊、請參閱 https://docs.netapp.com/us-en/trident/earlier-versions.html["較早版本的文件"]。
-
-
-IMPORTANT: 如果您要從任何先前的Trident版本升級並使用Azure NetApp Files 更新版本、則「位置」組態參數現在是必填的單一欄位。
+NetApp持續改善及強化其產品與服務。以下是Astra Trident的一些最新功能。
 
 
 
